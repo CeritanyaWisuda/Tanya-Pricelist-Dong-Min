@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="id"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Tanya Pricelist Wisuda&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input, select, textarea, button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #25D366;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;Tanya Pricelist Foto Wisuda&lt;/h3&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type="text" id="nama" placeholder="Nama Anda" required&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;select id="sesi"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option value=""&gt;Jenis Sesi (opsional)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option&gt;Solo&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option&gt;Couple&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;option&gt;Group&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;textarea id="kebutuhan" placeholder="Kebutuhan / pertanyaan (opsional)"&gt;&lt;/textarea&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button onclick="kirimWA()"&gt;Hubungi Admin via WhatsApp&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function kirimWA() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var nama = document.getElementById("nama").value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var sesi = document.getElementById("sesi").value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>var kebutuhan = document.getElementById("kebutuhan").value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!nama) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert("Mohon isi nama terlebih dahulu.");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>var nomorWA = "6285129787216";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>var pesan =</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"Halo admin,%0A%0A" +</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"Saya " + nama + " ingin menanyakan pricelist foto wisuda.%0A";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (sesi) pesan += "Jenis sesi: " + sesi + "%0A";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (kebutuhan) pesan += "Kebutuhan: " + kebutuhan + "%0A";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.location.href = "https://wa.me/" + nomorWA + "?text=" + pesan;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
