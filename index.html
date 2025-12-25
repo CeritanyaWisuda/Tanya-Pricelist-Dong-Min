@@ -2,82 +2,113 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Tanya Pricelist Foto Wisuda</title>
+  <title>Ceritanya Wisuda</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    * {
+      font-family: "Times New Roman", Times, serif;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: times-new-roman, sans-serif;
-      background: #f5f5f5;
+      background: #f4f4f4;
       padding: 20px;
     }
-    .box {
-      max-width: 400px;
+
+    .form-box {
+      max-width: 500px;
       background: #ffffff;
-      padding: 20px;
+      margin: 60px auto;
+      padding: 25px;
       border-radius: 12px;
-      margin: 50px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    input, select, textarea, button {
+
+    .judul {
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 15px;
+    }
+
+    input {
       width: 100%;
       padding: 10px;
-      margin-top: 10px;
-      border-radius: 6px;
-      border: 1px solid #ddd;
       font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
     }
+
     button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 12px;
       background: #25D366;
-      color: #fff;
-      border: none;
-      cursor: pointer;
+      color: #ffffff;
       font-size: 16px;
-      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
+
 <body>
 
-<div class="box">
-  <h3>Hi kak! Senang bisa nemenin di hari spesial, kami dengan senang hati siap membantu mengabadikannya☺️</h3>
+  <div class="form-box">
+    <div class="judul">
+      Hi Kak Ini Ceritanya Wisuda.  
+      Senang bisa bertemu di moment Spesialmu,  
+      Kami dengan senang hati siap membantu mengabadikannya☺️
+    </div>
 
-  <input type="text" id="nama" placeholder="Nama Anda">
+    <label>Nama</label>
+    <input type="text" id="nama" placeholder="Masukkan nama kamu">
 
-  <select id="sesi">
+    <label>Kampus</label>
+    <input type="text" id="kampus" placeholder="Nama kampus">
+
+    <label>Tanggal Wisuda</label>
     <input type="date" id="tanggal">
-    <option value="">Session</option>
-    <option>Personal</option>
-    <option>Double</option>
-    <option>Group</option>
-  </select>
 
-  <textarea id="pesan" placeholder="Pertanyaan / kebutuhan"></textarea>
+    <button onclick="kirimWA()">Kirim ke WhatsApp</button>
+  </div>
 
-  <button onclick="kirimWA()">Hubungi Admin via WhatsApp</button>
-</div>
+  <script>
+    function kirimWA() {
+      var nama = document.getElementById("nama").value;
+      var kampus = document.getElementById("kampus").value;
+      var tanggal = document.getElementById("tanggal").value;
 
-<script>
-function kirimWA() {
-  var nama = document.getElementById("nama").value;
-   var pesan = document.getElementById("Kampus").value;
-  var tanggal = document.getElementById("tanggal").value;
-  var sesi = document.getElementById("sesi").value;
- 
+      if (!nama || !kampus || !tanggal) {
+        alert("Mohon lengkapi semua data terlebih dahulu 🙂");
+        return;
+      }
 
-  if (!nama) {
-    alert("Isi nama dulu ya 🙂");
-    return;
-  }
+      var nomorWA = "6285129787216";
 
-  var nomor = "6285129787216";
-  var text = "Halo Ceritanya Wisuda,%0A%0ASaya " + nama + " ingin tanya pricelist foto wisuda.%0A";
+      var pesan =
+        "Halo Ceritanya Wisuda,%0A%0A" +
+        "Nama: " + nama + "%0A" +
+        "Kampus: " + kampus + "%0A" +
+        "Tanggal Wisuda: " + tanggal;
 
-  if (sesi) text += "Sesi: " + sesi + "%0A";
-  if (tanggal) text += "Tanggal: " + tanggal + "%0A";
-  if (pesan) text += "Catatan: " + pesan;
-
-  window.location.href = "https://wa.me/" + nomor + "?text=" + text;
-}
-</script>
+      window.location.href =
+        "https://wa.me/" + nomorWA + "?text=" + pesan;
+    }
+  </script>
 
 </body>
 </html>
