@@ -69,9 +69,9 @@
 
   <div class="form-box">
     <div class="judul">
-      Hi Kak Ini Ceritanya Wisuda.  
-      Senang bisa bertemu di moment Spesialmu,  
-      Kami dengan senang hati siap membantu mengabadikannya☺️
+      Hi Kak Ini Ceritanya Wisuda.<br>
+      Senang bisa bertemu di moment Spesialmu,<br>
+      Kami dengan senang hati siap membantu mengabadikannya ☺️
     </div>
 
     <label>Nama</label>
@@ -83,7 +83,7 @@
     <label>Tanggal Wisuda</label>
     <input type="date" id="tanggal">
 
-    <button onclick="kirimWA()">Kirim ke WhatsApp</button>
+    <button onclick="kirimWA()">Chat Mince Yaw🤩</button>
   </div>
 
   <script>
@@ -97,14 +97,18 @@
         return;
       }
 
+      // Ubah format tanggal ke dd-mm-yyyy
+      var tgl = tanggal.split("-");
+      var tanggalFix = tgl[2] + "-" + tgl[1] + "-" + tgl[0];
+
       var nomorWA = "6285129787216";
 
       var pesan =
         "Halo Ceritanya Wisuda,Boleh dikirimkan info Pricelist.%0A%0A" +
         "Nama: " + nama + "%0A" +
         "Kampus: " + kampus + "%0A" +
-        "Tanggal Wisuda: " + tanggal +
-      "Terimakasih kak.";
+        "Tanggal Wisuda: " + tanggalFix + "%0A" +
+        "Terimakasih kak.";
 
       window.location.href =
         "https://wa.me/" + nomorWA + "?text=" + pesan;
