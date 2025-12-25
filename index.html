@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tanya Pricelist Foto Wisuda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .box {
+      max-width: 400px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 50px auto;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    button {
+      background: #25D366;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Tanya Pricelist Foto Wisuda</h3>
+
+  <input type="text" id="nama" placeholder="Nama Anda">
+
+  <select id="sesi">
+    <option value="">Jenis Sesi</option>
+    <option>Solo</option>
+    <option>Couple</option>
+    <option>Group</option>
+  </select>
+
+  <textarea id="pesan" placeholder="Pertanyaan / kebutuhan"></textarea>
+
+  <button onclick="kirimWA()">Hubungi Admin via WhatsApp</button>
+</div>
+
+<script>
+function kirimWA() {
+  var nama = document.getElementById("nama").value;
+  var sesi = document.getElementById("sesi").value;
+  var pesan = document.getElementById("pesan").value;
+
+  if (!nama) {
+    alert("Isi nama dulu ya 🙂");
+    return;
+  }
+
+  var nomor = "6285129787216";
+  var text = "Halo admin,%0A%0ASaya " + nama + " ingin tanya pricelist foto wisuda.%0A";
+
+  if (sesi) text += "Sesi: " + sesi + "%0A";
+  if (pesan) text += "Catatan: " + pesan;
+
+  window.location.href = "https://wa.me/" + nomor + "?text=" + text;
+}
+</script>
+
+</body>
+</html>
