@@ -70,7 +70,7 @@
   <div class="form-box">
     <div class="judul">
       Hi Kak Ini Ceritanya Wisuda.<br>
-      Senang bisa bertemu di moment Spesialmu,<br>
+      Senang bisa bertemu di momen spesialmu,<br>
       Kami dengan senang hati siap membantu mengabadikannya ☺️
     </div>
 
@@ -97,18 +97,36 @@
         return;
       }
 
-      // Ubah format tanggal ke dd-mm-yyyy
+      var namaBulan = [
+        "Januari", "Februari", "Maret", "April",
+        "Mei", "Juni", "Juli", "Agustus",
+        "September", "Oktober", "November", "Desember"
+      ];
+
+      var hariList = [
+        "Minggu", "Senin", "Selasa",
+        "Rabu", "Kamis", "Jumat", "Sabtu"
+      ];
+
+      var dateObj = new Date(tanggal);
+      var hari = hariList[dateObj.getDay()];
+
       var tgl = tanggal.split("-");
-      var tanggalFix = tgl[2] + "-" + tgl[1] + "-" + tgl[0];
+      var tanggalFix =
+        hari + ", " +
+        tgl[2] + " " +
+        namaBulan[parseInt(tgl[1]) - 1] + " " +
+        tgl[0];
 
       var nomorWA = "6285129787216";
 
       var pesan =
-        "Halo Ceritanya Wisuda,Boleh dikirimkan info Pricelist.%0A%0A" +
-        "Nama: " + nama + "%0A" +
-        "Kampus: " + kampus + "%0A" +
-        "Tanggal Wisuda: " + tanggalFix + "%0A" +
-        "Terimakasih kak.";
+        "Halo Ceritanya Wisuda 👋%0A%0A" +
+        "Boleh minta info pricelist, kak?%0A%0A" +
+        "Nama            : " + nama + "%0A" +
+        "Kampus          : " + kampus + "%0A" +
+        "Tanggal Wisuda  : " + tanggalFix + "%0A%0A" +
+        "Terima kasih, kak 🙏";
 
       window.location.href =
         "https://wa.me/" + nomorWA + "?text=" + pesan;
