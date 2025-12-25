@@ -40,10 +40,12 @@
       "Tanggal Wisuda  : " + tanggalFix + "\n\n" +
       "Terima kasih, kak 🙏";
 
-    // WAJIB encode agar emoji terbaca
     var urlWA =
-      "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
+      "https://api.whatsapp.com/send?phone=" +
+      nomorWA +
+      "&text=" +
+      encodeURIComponent(pesan);
 
-    window.location.href = urlWA;
+    window.open(urlWA, "_blank");
   }
 </script>
